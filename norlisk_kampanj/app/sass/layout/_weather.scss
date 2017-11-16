@@ -1,0 +1,55 @@
+/* WEATHER.SCSS: Styling the quiz-section */
+
+.weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFE67E;
+}
+
+.weather-icon {
+  padding: 50px;
+}
+
+.weather-text {
+  padding: 50px;
+}
+
+span {
+  text-align: right;
+  &.temperature {
+    font-size: 40px;
+    font-weight: bold;
+    display: block;
+  }
+  &.summary {
+    font-size: 20px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .weather-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  span {
+    text-align: center;
+    &.temperature {
+      font-size: 40px;
+      font-weight: bold;
+      display: block;
+    }
+    &.summary {
+      font-size: 20px;
+      display: block;
+    }
+  }
+  div.weather-text>h1 {
+    display: none;
+  }
+}

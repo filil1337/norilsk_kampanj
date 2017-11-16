@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Facebook Meta-properties -->
+  <meta property="og:url" content="https://studigodmode.se/kampanj" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Norilsk-quizet" />
+  <meta property="og:description" content="Vad jag vet om Sibiriens Paris" />
+  <meta property="og:image" content="https://studiogodmode.se/kampanj/images/fb-picture.jpg" />
+
+
+  <title>Kampanj</title>
+  
+  <link rel="stylesheet" href="css/normalize.min.css">
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '1796712503977559',
+        xfbml: true,
+        version: 'v2.9'
+      });
+      FB.AppEvents.logPageView();
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <div class="header-container">
+
+    <div class="header-item">
+      <h1>UPPLEV NORILSK</h1>
+      <p>I Sibirien, en bra bit ovanför polcirkeln ligger staden Norilsk <em>Норильск</em>, eller Sibiriens Paris som vi brukar
+        säga här. Känd för sin förstklassiga stålindustri och sina stränga vintrar är detta ett paradis för alla som älskar
+        varierad betongarkitektur och dynamisk industrikänsla.</p>
+      <p>Tröttnar man på den fartfyllda storstadspulsen så omges Norilsk av naturupplevelser utöver det vanliga. Sibiriens vidsträckta
+        tundra ligger utsträkt och lockar friluftsfantasten inom dig till nya äventyr och minnen för livet.</p>
+      <h3>Ta chansen att komma hit och uppleva ett riktigt metropolis!</h3>
+      <p>
+        <em>Tävlingsperiod mellan den 17 maj 2017 - 12 september 3031</em>
+      </p>
+    </div>
+  </div>
+  <!-- END: div.header-container -->
+
+  <div class="map-container">
+
+
+    <div class="text-item">
+
+      <h2>Vår stolta stad</h2>
+      <p>Norilsk (Ryska: Норильск) är en industristad i Krasnojarsk kraj, Ryssland, belägen över polcirkeln, öster om floden
+        Jenisej och syd om den västra Tajmyrhalvön.</p>
+      <p>Staden har en permanent befolkning på 175 000 personer, men utöver detta finns det även många säsongs- och gästarbetare.
+        Norilsk är världens nordligaste stad med över 100 000 innevånare</p>
+      <p>På grund av sitt nordliga läge är Norilsk ett snöparadis, vår stad täcks av det vita guldet mellan 250 och 270 dagar
+        per år. Detta ger dig som besökare fantastiska möjligheter till långskidåkning, extra bra är det att tundran runtom
+        staden är helt fri från träd.</p>
+    </div>
+    <div class="map-item" id="map">
+
+    </div>
+  </div>
+
+
+
+  <div class="weather-container">
+    <div class="weather-icon">
+      <canvas id="icon" width="200" height="200"></canvas>
+    </div>
+    <div class="weather-text">
+      <h1>Vädret i Norilsk</h1>
+      <span class="temperature"></span>
+      <span class="summary"></span>
+    </div>
+  </div>
+
+
+  <div class="video-container">
+    <div class="video-item">
+      <h2>MMC Norilsk Nickel</h2>
+      <p>MMC Norilsk Nickel är den största arbetsgivaren i vår stad. Företaget ingår i Nornickel Group som är världens största
+        producent av nickel och palladium. Företaget producerar även kobolt, rhodium, silver, guld, iridium, ruthenium, selenium,
+        tellurium och sulfur.</p>
+      <p>Staden Norilsk grundades helt på den historiska föregångaren till Norilsk Nickel. Året var 1935 och Folkkommissariatets
+        råd tog beslutet att grunda staden Norilsk för att där uppföra Sovietunionens största gruv- och metalkomplex. 1939
+        levererade produktionen för första gången och efter det stora patriotiska kriget (andra världskriget i väst) skedde
+        en rasande utbyggnad av vår stad. Vid 1953 stod Norilsk för 35% av Sovietunionens totala nickeltillverkning, 12%
+        av koppar, 30% av kobolt och 90% av platina.</p>
+      <p>Kort efter Sovietunionens fall privatiserades den tidigare statliga produktionen och aktiebolaget RAO Norilsk Nickel
+        bildades. En viss del av företaget var fortfarande i statlig ägo, men inte en majoritet.</p>
+
+      <p>I dag är Nornickel ett globalt företag, och ett av Rysslands främsta, Nornickel anställer över 90 000 personer</p>
+      <p>Vill du lära dig mer så kan du gå in på <a href="www.nornik.ru">www.nornik.ru</a></p>
+
+    </div>
+  </div>
+
+
+  <!-- START GAME -->
+  <div class="start-container">
+    <div class="start-item">
+      <h2>Frågesport Norilsk</h2>
+      <p>Dela din poäng på Facebook med hashtag #visitnorilsk för att tävla om en resa till vår stad!</p>
+      <input class="start-btn" id="startgame" type="button" value="Starta Quizet" onclick="startGame();">
+    </div>
+  </div>
+
+  <!-- GAME -->
+  <div class="quiz-container">
+
+    <div class="question-container">
+
+      <div class="question-item" id="#question-text">
+        <input class="start-btn" id="startgame" type="button" value="Starta Quizet" onclick="startGame();">
+
+      </div>
+    </div>
+
+    <div class="answer-container">
+
+      <button class="answer-item" id="answer-one" name="1">
+          </button>
+
+      <button class="answer-item" id="answer-two" name="2">
+          </button>
+
+      <button class="answer-item" id="answer-three" name="3">
+          </button>
+
+      <button class="answer-item" id="answer-four" name="4">
+          </button>
+
+    </div>
+
+  </div>
+
+  <!-- END GAME -->
+  <div class="score-container">
+
+    <div class="score-item">
+        <div>
+        <p>Du hade <span class="correct"></span> rätta svar</p>
+        <p>Du hade <span class="wrong"></span> felaktiga svar</p>
+        <p>Sammanlagt fick du <span class="percent"></span> rätt</p>
+        </div>
+      <div>
+        <input class="start-btn" id="startgame" type="button" value="Starta om" onclick="restartGame();">
+        <input class="fb-btn" type="button" id="shareBtn" value="Dela på Facebook">
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    var marker;
+
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+          lat: 69.3408703,
+          lng: 87.956736
+        },
+        scrollwheel: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        draggable: false,
+        zoom: 3,
+        disableDefaultUI: true,
+        styles: [{
+            "elementType": "geometry",
+            "stylers": [{
+              "color": "#ebe3cd"
+            }]
+          },
+          {
+            "elementType": "labels.text.fill",
+            "stylers": [{
+              "color": "#523735"
+            }]
+          },
+          {
+            "elementType": "labels.text.stroke",
+            "stylers": [{
+              "color": "#f5f1e6"
+            }]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [{
+              "color": "#c9b2a6"
+            }]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "elementType": "geometry.stroke",
+            "stylers": [{
+              "color": "#dcd2be"
+            }]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "elementType": "labels.text.fill",
+            "stylers": [{
+              "color": "#ae9e90"
+            }]
+          },
+          {
+            "featureType": "landscape.natural",
+            "elementType": "geometry",
+            "stylers": [{
+              "color": "#dfd2ae"
+            }]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [{
+              "color": "#dfd2ae"
+            }]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [{
+              "color": "#93817c"
+            }]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "geometry.fill",
+            "stylers": [{
+              "color": "#a5b076"
+            }]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.fill",
+            "stylers": [{
+              "color": "#447530"
+            }]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [{
+              "color": "#f5f1e6"
+            }]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [{
+              "color": "#fdfcf8"
+            }]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [{
+              "color": "#f8c967"
+            }]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [{
+              "color": "#e9bc62"
+            }]
+          },
+          {
+            "featureType": "road.highway.controlled_access",
+            "elementType": "geometry",
+            "stylers": [{
+              "color": "#e98d58"
+            }]
+          },
+          {
+            "featureType": "road.highway.controlled_access",
+            "elementType": "geometry.stroke",
+            "stylers": [{
+              "color": "#db8555"
+            }]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [{
+              "color": "#806b63"
+            }]
+          },
+          {
+            "featureType": "transit.line",
+            "elementType": "geometry",
+            "stylers": [{
+              "color": "#dfd2ae"
+            }]
+          },
+          {
+            "featureType": "transit.line",
+            "elementType": "labels.text.fill",
+            "stylers": [{
+              "color": "#8f7d77"
+            }]
+          },
+          {
+            "featureType": "transit.line",
+            "elementType": "labels.text.stroke",
+            "stylers": [{
+              "color": "#ebe3cd"
+            }]
+          },
+          {
+            "featureType": "transit.station",
+            "elementType": "geometry",
+            "stylers": [{
+              "color": "#dfd2ae"
+            }]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry.fill",
+            "stylers": [{
+              "color": "#b9d3c2"
+            }]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [{
+              "color": "#92998d"
+            }]
+          }
+        ]
+      });
+      var image = 'images/norilsksmall.png';
+
+      marker = new google.maps.Marker({
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP,
+        icon: image,
+        position: {
+          lat: 69.3408703,
+          lng: 87.956736
+        }
+      });
+      marker.addListener('click', toggleBounce);
+    }
+
+    function toggleBounce() {
+      if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+      } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+      }
+    }
+  </script>
+
+  <script src="js/skycons.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd0n4oujo62ULbOXQ5vr2ehXB0Fphzbcg&callback=initMap" async
+    defer></script>
+    
+  <script src="js/main.min.js"></script>
+
+</body>
+</html>

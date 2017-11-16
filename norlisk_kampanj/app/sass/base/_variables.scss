@@ -1,0 +1,48 @@
+/*
+
+VARIABLES.SCSS: Global Variables used for the site.
+
+CONTENTS:
+
+  1 Colors
+    1.a : Primary Colors
+    1.b : Special Colors
+
+  2. Fonts
+    2.a : Import Google Fonts
+    2.b : Header fonts
+    2.c : Primary text fonts
+
+  */
+
+
+/* COLORS */
+
+
+/* Primary Colors */
+
+$primary-light: #FFF;
+$primary-dark: #000;
+$primary-highlight: #F44336;
+
+/* Secondary Colors */
+
+$secondary-light: darken( $primary-light, 20%);
+$secondary-dark: lighten( $primary-dark, 20%);
+$secondary-highlight: #50EFD2;
+
+/* FONTS */
+
+/* Import Google Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway:800');
+
+/* Header fonts */
+
+$header: 'Raleway',
+sans-serif;
+
+/* Primary text fonts */
+
+$primary-text: 'Open Sans',
+sans-serif;

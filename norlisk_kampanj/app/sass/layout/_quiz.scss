@@ -1,0 +1,217 @@
+/* QUIZ.SCSS: Styling the quiz-section */
+
+.start-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0 50px;
+  background-color: #db8555;
+}
+
+.start-item {
+  font-size: inherit;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 40px;
+  padding: 50px;
+}
+
+.start-btn {
+  font-size: 30px;
+  color: white;
+  background-color: #FFE67E;  
+  width: 49vw;
+  height: 100px;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+}
+
+
+/* GAME */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+/* Question CSS */
+.question-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 60%;
+  padding: 0 50px;
+}
+
+.question-item {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-radius: 40px;
+  padding: 50px;
+}
+/* Answer CSS */
+.answer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 40%;
+}
+
+.answer-item {
+  font-size: 30px;
+  width: 25%;
+  color: white;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+  -moz-outline: none;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+/* END GAME */
+.score-container {
+  background-color: #CD5C5C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.score-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 700;
+  letter-spacing:3px;
+  color: #fff;
+  font-size: 20px; 
+}
+
+.fb-btn {
+  font-size: 30px;
+  color: white;
+  width: 49vw;
+  height: 100px;
+  text-align: center;
+  background-color: #3B5998;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Some coloring for the scores */
+span {
+  display: inline;
+}
+span.correct {
+  color: white;
+  font-weight: bold;
+}
+
+span.wrong {
+  color: orange;
+  font-weight: bold;
+}
+
+span.percent {
+  color: yellow;
+  font-weight: bold;
+}
+/* Media Query */
+@media screen and (max-width: 920px) {
+
+  .start-container {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .start-item {
+    word-wrap: break-word;
+    width: 100vw;
+    height: 50vh;
+    font-size: 15px;
+
+  }
+
+  .start-btn {
+    font-size: 15px;
+    width: 100%;
+    height: 70px;
+  }
+  .quiz-container {
+    flex-direction: column;
+  }
+
+  /* Questions */
+
+  .question-container {
+    width: 70vh;
+    width: 100vw;
+  }
+
+  .question-item {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  /* Answers */
+
+  .answer-container {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .answer-item {
+    width: 25%;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+  }
+
+  .answer-item {
+    height: 25%;
+    width: 100%;
+  }
+
+  /* Scores */
+
+  .score-container {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .score-item {
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    padding: 40px;
+  }
+
+  .fb-btn {
+    font-size: 15px;
+    width: 100%;
+    height: 70px;
+  }
+
+}

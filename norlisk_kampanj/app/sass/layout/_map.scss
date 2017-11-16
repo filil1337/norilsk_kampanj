@@ -1,0 +1,41 @@
+/* MAP.SCSS: Styling the map-section */
+
+.map-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.map-item {
+  min-height: 100vh;
+  min-width: 60vw;
+  background-color: orange;
+}
+
+.text-item {
+  background-color: #424242;
+  padding: 50px;
+  min-height: auto;
+  min-width: 40vw;
+  color: white;
+}
+
+
+/* Making Google-maps span entire div */
+
+#map {
+  height: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .map-container,
+  {
+    flex-basis: 1;
+    flex-direction: column;
+    background-image: none;
+  }
+  .map-item {
+    width: 100vw;
+  }
+}

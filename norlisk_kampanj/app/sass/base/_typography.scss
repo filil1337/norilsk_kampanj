@@ -1,0 +1,61 @@
+/*
+
+TYPOGRAPHY.SCSS: Styles related to the typography of the site.
+
+CONTENTS:
+
+  1 Headers
+
+  2. Paragraphs & Spans
+
+*/
+
+
+/* Headers */
+
+
+/* All Headers */
+
+h1 {
+  font-family: $header;
+  font-size: 5em;
+}
+
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+h2,
+h3,
+h4 {
+  font-family: $header;
+  text-transform: uppercase;
+  font-weight: 1200;
+}
+
+h2 {
+  padding: 2px;
+}
+
+
+/* Paragraphs & Spans */
+
+p {
+  font-family: $primary-text;
+  line-height: 2em;
+}
+
+span.header {
+  font-family: $primary-text;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+
+/* Secondary Colors */
+
+$secondary-light: darken( $primary-light, 20%);
+$secondary-dark: lighten( $primary-dark, 20%);
+$secondary-highlight: #50EFD2;

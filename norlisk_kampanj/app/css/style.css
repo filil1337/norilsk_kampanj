@@ -1,0 +1,459 @@
+/* Imports */
+/*
+ROOT.SCSS: Global root-styles
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Raleway:800");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+/*
+
+VARIABLES.SCSS: Global Variables used for the site.
+
+CONTENTS:
+
+  1 Colors
+    1.a : Primary Colors
+    1.b : Special Colors
+
+  2. Fonts
+    2.a : Import Google Fonts
+    2.b : Header fonts
+    2.c : Primary text fonts
+
+  */
+/* COLORS */
+/* Primary Colors */
+/* Secondary Colors */
+/* FONTS */
+/* Import Google Fonts */
+/* Header fonts */
+/* Primary text fonts */
+/*
+
+TYPOGRAPHY.SCSS: Styles related to the typography of the site.
+
+CONTENTS:
+
+  1 Headers
+
+  2. Paragraphs & Spans
+
+*/
+/* Headers */
+/* All Headers */
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 5em; }
+
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 2em; } }
+
+h2,
+h3,
+h4 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 1200; }
+
+h2 {
+  padding: 2px; }
+
+/* Paragraphs & Spans */
+p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 2em; }
+
+span.header {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8em;
+  text-align: center; }
+
+/* Secondary Colors */
+/* HEADER.SCSS: Header styling for the site */
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: url("../images/norilsk_buss.jpg") no-repeat center center;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh; }
+
+.header-item {
+  background-color: #F6CB4F;
+  width: 40vw;
+  min-height: 100vh;
+  padding: 50px; }
+
+@media screen and (max-width: 960px) {
+  .header-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-image: none; }
+  .header-item {
+    width: 100vw; } }
+
+/* MAP.SCSS: Styling the map-section */
+.map-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100vw;
+  min-height: 100vh; }
+
+.map-item {
+  min-height: 100vh;
+  min-width: 60vw;
+  background-color: orange; }
+
+.text-item {
+  background-color: #424242;
+  padding: 50px;
+  min-height: auto;
+  min-width: 40vw;
+  color: white; }
+
+/* Making Google-maps span entire div */
+#map {
+  height: 100%; }
+
+@media screen and (max-width: 960px) {
+  .map-container {
+    -ms-flex-preferred-size: 1;
+        flex-basis: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-image: none; }
+  .map-item {
+    width: 100vw; } }
+
+/* WEATHER.SCSS: Styling the quiz-section */
+.weather-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFE67E; }
+
+.weather-icon {
+  padding: 50px; }
+
+.weather-text {
+  padding: 50px; }
+
+span {
+  text-align: right; }
+  span.temperature {
+    font-size: 40px;
+    font-weight: bold;
+    display: block; }
+  span.summary {
+    font-size: 20px;
+    display: block; }
+
+@media screen and (max-width: 960px) {
+  .weather-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto; }
+  span {
+    text-align: center; }
+    span.temperature {
+      font-size: 40px;
+      font-weight: bold;
+      display: block; }
+    span.summary {
+      font-size: 20px;
+      display: block; }
+  div.weather-text > h1 {
+    display: none; } }
+
+/* VIDEO.SCSS: Styling the video-section */
+.video-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: url("../images/smelting.jpg") no-repeat center center;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh; }
+
+.video-item {
+  background-color: #DD2C00;
+  color: #FAFAFA;
+  width: 40vw;
+  min-height: 100vh;
+  padding: 50px; }
+  .video-item a {
+    color: #FFE67E;
+    text-decoration: none;
+    font-weight: bold; }
+    .video-item a:hover {
+      text-decoration: underline; }
+
+@media screen and (max-width: 960px) {
+  .video-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-image: none; }
+  .video-item {
+    width: 100vw; } }
+
+/* QUIZ.SCSS: Styling the quiz-section */
+.start-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0 50px;
+  background-color: #db8555; }
+
+.start-item {
+  font-size: inherit;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 40px;
+  padding: 50px; }
+
+.start-btn {
+  font-size: 30px;
+  color: white;
+  background-color: #FFE67E;
+  width: 49vw;
+  height: 100px;
+  text-align: center;
+  border: 0;
+  cursor: pointer; }
+  .start-btn:hover {
+    text-decoration: underline; }
+
+/* GAME */
+.quiz-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  margin: 0; }
+
+/* Question CSS */
+.question-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 60%;
+  padding: 0 50px; }
+
+.question-item {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-radius: 40px;
+  padding: 50px; }
+
+/* Answer CSS */
+.answer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 40%; }
+
+.answer-item {
+  font-size: 30px;
+  width: 25%;
+  color: white;
+  text-align: center;
+  border: 0;
+  cursor: pointer; }
+
+button:focus {
+  outline: none;
+  -moz-outline: none; }
+
+button:hover {
+  text-decoration: underline; }
+
+/* END GAME */
+.score-container {
+  background-color: #CD5C5C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh; }
+
+.score-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #fff;
+  font-size: 20px; }
+
+.fb-btn {
+  font-size: 30px;
+  color: white;
+  width: 49vw;
+  height: 100px;
+  text-align: center;
+  background-color: #3B5998;
+  border: 0;
+  cursor: pointer; }
+
+/* Some coloring for the scores */
+span {
+  display: inline; }
+
+span.correct {
+  color: white;
+  font-weight: bold; }
+
+span.wrong {
+  color: orange;
+  font-weight: bold; }
+
+span.percent {
+  color: yellow;
+  font-weight: bold; }
+
+/* Media Query */
+@media screen and (max-width: 920px) {
+  .start-container {
+    height: 100vh;
+    width: 100vw; }
+  .start-item {
+    word-wrap: break-word;
+    width: 100vw;
+    height: 50vh;
+    font-size: 15px; }
+  .start-btn {
+    font-size: 15px;
+    width: 100%;
+    height: 70px; }
+  .quiz-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  /* Questions */
+  .question-container {
+    width: 70vh;
+    width: 100vw; }
+  .question-item {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 3px; }
+  /* Answers */
+  .answer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%; }
+  .answer-item {
+    width: 25%;
+    color: white;
+    text-align: center;
+    border: 1px solid white; }
+  .answer-item {
+    height: 25%;
+    width: 100%; }
+  /* Scores */
+  .score-container {
+    height: 100vh;
+    width: 100vw; }
+  .score-item {
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    padding: 40px; }
+  .fb-btn {
+    font-size: 15px;
+    width: 100%;
+    height: 70px; } }
